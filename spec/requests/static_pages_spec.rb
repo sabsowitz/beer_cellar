@@ -24,4 +24,11 @@ describe "static_pages" do
    it { should have_selector('h1', text: "Help/FAQ") }
    it { should have_title("Beer Cellar | Help") }
   end
+
+  describe "contact" do
+    before { visit contact_path }
+
+    it { should have_selector('h1', "Contact") }
+    it { should have_title("Beer Cellar | Contact") }
+  end
 end
