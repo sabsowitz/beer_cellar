@@ -1,6 +1,11 @@
 
 <% provide(:title, 'Home') %>
+
+<div class= "home-page-body">
 <body>
-  <h1> Welcome!</h1>
-  <p> This is the homepage for the BeerCellar application.</p>
+  <h1> Welcome!</h1><br />
+  <h2> This is the homepage for the BeerCellar application.</h2><br />
+
+  <%= link_to "Sign up for BeerCellar now!", signup_path, class: "btn btn-large btn-primary" %>
 </body>
+</div>
