@@ -1,2 +1,12 @@
-<title>Beer Cellar | Help</title>
-<h1>Help/FAQ</h1>
+
+<% provide(:title, 'Help') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BeerCellar | <%= yield(:title) %></title>
+  </head> 
+<body>
+  <h1> Help/FAQ</h1>
+  <p> This is the help page for the BeerCellar application.</p>
+</body>
+</html>

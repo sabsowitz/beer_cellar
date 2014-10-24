@@ -1,2 +1,12 @@
-<title>Beer Cellar | About</title>
-<h1>About</h1>
+
+<% provide(:title, 'About') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BeerCellar | <%= yield(:title) %></title>
+  </head> 
+<body>
+  <h1> About BeerCellar</h1>
+  <p> This is the About page for the BeerCellar application.</p>
+</body>
+</html>
