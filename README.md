@@ -1,1 +1,2 @@
-#BeerCellar
+#GitHub README for BeerCellar
+
