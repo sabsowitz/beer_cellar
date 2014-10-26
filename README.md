@@ -11,4 +11,19 @@ BeerCellar is a web application that allows users to find bottles of beer throug
 * Front-end design and back-end development from scractch.
 
 ##User Stories
+* As a user, I can sign up for an account with an email address and password.
+* As a user, I can log in and out of my account.
+* As a user, I can perform a basic search of beer by entering search criteria.
+* As a user, I can see a list of search results and link to a specific search result.
+* As a user, I can save specific bottles from search results to "My Cellar."
+* As a user, I can view a list of beer bottles added to "My Cellar."
+* As a user, I can edit all bottles in "My Cellar."
+* As a user, I can delete bottles in "My Cellar."
+* As a user, I can add notes on bottles.
+* As a user, I can add or delete multiple cellars.
+
+##Links
+[Heroku](http://stormy-basin-7100.herokuapp.com/)
+[Beer Cellar GitHub](http://github.com/sabsowitz/beer_cellar)
+
 
