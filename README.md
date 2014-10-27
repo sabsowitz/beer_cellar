@@ -23,7 +23,10 @@ BeerCellar is a web application that allows users to find bottles of beer throug
 * As a user, I can add or delete multiple cellars.
 
 ##Links
-[Heroku](http://stormy-basin-7100.herokuapp.com/)
-[Beer Cellar GitHub](http://github.com/sabsowitz/beer_cellar)
+* [Heroku Beer Cellar](http://stormy-basin-7100.herokuapp.com/)
+* [Beer Cellar GitHub](http://github.com/sabsowitz/beer_cellar)
+* [ERD](https://moqups.com/Fritz1987/u1V2XxqJ/p:a370db097)
+* [Beer Cellar mockup](https://moqups.com/Fritz1987/u1V2XxqJ/p:a3db1912e)
+* [Trello](https://www.trello.com/stephensabsowitz)
 
 
