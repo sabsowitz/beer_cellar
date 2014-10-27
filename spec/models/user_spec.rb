@@ -3,15 +3,21 @@ require 'spec_helper'
 describe User do
 
   before do
-     @user = User.new(name: "Stephen", email: "sabsowitz@yahoo.com") 
+     @user = User.new(name: "Example user", email: "example@user.com",
+                      password: "foobar", password_confirmation: "foobar") 
    end
 
   subject { @user }
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
+  it { should respond_to(:password_digest) }
+  it { should respond_to(:password) }
+  it { should respond_to(:password_confirmation) }
+  it { should respond_to(:authenticate) }
 
   it { should be_valid }
+
 
   # Name Validations
   describe "when name is not present" do
@@ -69,19 +75,51 @@ describe User do
       mixed_case_email = "fooBAR@exaMPlE.coM"
       @user.email = mixed_case_email
       @user.save
-      expect(@user.reload.email).to eq mixed_case_email.downcase
+      expect(@user.email).to eq mixed_case_email.downcase
     end
   end
 
   describe "when already taken" do
     before do
       user_with_same_email = @user.dup
-      user_with_same_email.email = @user.email.upcase
       user_with_same_email.save
+      it { should_not be_valid }
+      User.destroy_all
     end
   end
 
-  it { should_not be_valid }
+  # Password Validations
+  describe "when password is not present" do
+    before do
+      @user = User.new(name: "Example user", email: "user@example.com",
+                       password: " ", password_confirmation: " ")
+    end
+    it { should_not be_valid}
+  end
 
-  User.destroy_all
+  describe "when password doesn't match confirmation" do
+    before { @user.password_confirmation = "mismatch" }
+    it { should_not be_valid }
+  end
+
+  describe "a password that is too short" do
+    before { @user.password = @user.password_confirmation = "a" * 5 }
+    it { should be_invalid }
+  end
+
+  describe "return value of authenticate method" do
+    before { @user.save }
+    let(:found_user) { User.find_by(email: @user.email) }
+
+    describe "with valid password" do
+      it { should eq found_user.authenticate(@user.password) }
+    end
+
+    describe "with invalid password" do
+      let(:user_for_invalid_password) { found_user.authenticate("invalid") }
+
+      it { should_not eq user_for_invalid_password }
+      specify { expect(user_for_invalid_password).to be_false }
+    end
+  end
 end 
