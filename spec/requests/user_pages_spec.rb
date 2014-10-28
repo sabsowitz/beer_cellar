@@ -61,10 +61,8 @@ describe "User pages" do
       visit edit_user_path(user)
     end
 
-    describe "page" do
-      it { should have_content("Update Your Profile") }
-      it { should have_title("Edit User") }
-    end
+    it { should have_content("Update Your Profile") }
+    it { should have_title("Edit User") }
 
     describe "with invalid information" do
       before { click_button "Save Changes" }
