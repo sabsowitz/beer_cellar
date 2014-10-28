@@ -1,8 +1,10 @@
 <h1>Beers#new</h1>
 <p>Find me in app/views/beers/new.html.erb</p>
 
-<% form_for(:beer, url: new_beer_path) do |f| %>
-  <%# fields that you search by %>
 
-  <%# submit button down here %>
+<%= form_tag beers_path, :method => 'get' do %>
+  <%= text_field_tag :beer_name, params[:beer_name] %>
+  <%= submit_tag "Search", :name => nil %>
 <% end %>
+
+<%= @results %>
