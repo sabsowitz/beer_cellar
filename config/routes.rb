@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'beers/index'
+
+  get 'beers/show'
+
+  get 'beers/new'
+
+  get 'beers/create'
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
