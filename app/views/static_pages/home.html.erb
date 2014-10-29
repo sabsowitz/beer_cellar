@@ -1,11 +1,18 @@
 
 <% provide(:title, 'Home') %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <!-- <div class="home-page-body"> -->
+        <div class="img-circle">
+        <!-- <img src="/assets/founders.jpg" alt="Rails"> -->
+        </div>
+        <h2> This is the homepage for the BeerCellar application.</h2><br />
 
-<div class= "home-page-body">
-<body>
-  <h1> Welcome!</h1><br />
-  <h2> This is the homepage for the BeerCellar application.</h2><br />
-
-  <%= link_to "Sign up for BeerCellar now!", signup_path, class: "btn btn-large btn-primary" %>
-</body>
+        <%= link_to "Sign up for BeerCellar now!", signup_path, class: "btn btn-large btn-primary" %>
+      <!-- </div> -->
+    </div>
+    <div class="col-md-2"></div>
+  </div>
 </div>

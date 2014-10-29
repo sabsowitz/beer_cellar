@@ -1,1 +1,11 @@
 @import "bootstrap";
+
+.img-circle {
+  background-image: url("/assets/founders.jpg");
+  background-size: 600px 600px;
+  /*background-repeat: no-repeat;*/
+
+  width: 600px;
+  height: 600px;
+   
+}
