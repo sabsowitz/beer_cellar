@@ -1,9 +1,0 @@
-<% provide(:title, "Search BeerCellar") %>
-<h1>Search</h1>
-
-<%= form_tag beers_path, :method => 'get' do %>
-  <%= text_field_tag :beer_name, params[:beer_name] %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
-
-<%= @result["data"][0]["name"] %>

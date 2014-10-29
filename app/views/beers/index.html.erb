@@ -1,12 +1,26 @@
-<% provide(:title, "Search BeerCellar") %>
+<% provide(:title, "Search") %>
 <h1>Search</h1>
 
 
 <%= form_tag beers_path, :method => 'get' do %>
   <%= text_field_tag :beer_name, params[:beer_name] %>
   <%= submit_tag "Search", :name => nil %>
+<% end %><br />
+
+<div class="results">
+<% if @result != nil %>
+  <% @result["data"].each do | beer | %>
+    <p> 
+                            <h1><%= name(beer) %></h1>
+      Style:                    <%= style(beer) %><br />
+      ABV%:                     <%= abv(beer) %><br />
+      IBUs:                     <%= ibu(beer) %><br />
+      Description:              <%= description(beer) %><br />
+      AVAILABILITY:             <%= when_available(beer) %><br />
+      SERVE IN:                 <%= glass_type(beer) %><br />
+      Label:                    <%= label(beer) %><br />
+      <b>Style Description:</b> <%= style_description(beer) %>
+    </p>
+  <% end %>
 <% end %>
-
-
-<%= @result["data"][0]["name"] %><br />
-<%= @result["data"][0]["description"] %>
+</div>
