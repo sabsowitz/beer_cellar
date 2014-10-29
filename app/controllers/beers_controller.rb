@@ -2,7 +2,7 @@ class BeersController < ApplicationController
   def index
     # # @response = HTTParty.get "http://api.brewerydb.com/v2/search?q=firestone&type=brewery&key=4938dd57b16650c7920500ed375f44e5"
     @beers = Beer.all
-    @response = Beer.party(params[:beer_name])
+    @result = Beer.party(params[:beer_name])
     # @beer = Beer.party(params[:beer_name])
   end
 
@@ -10,11 +10,11 @@ class BeersController < ApplicationController
   end
 
   def new
-    if params[:beer_name]
-      @results = Page.party(params[:beer_name])
-    else
-      @results = nil
-    end
+    # if params[:beer_name]
+      @result = Beer.party(params[:beer_name])
+    # else
+    #   @results = nil
+    # end
   end
 
   def create

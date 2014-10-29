@@ -6,4 +6,7 @@
   <%= text_field_tag :beer_name, params[:beer_name] %>
   <%= submit_tag "Search", :name => nil %>
 <% end %>
-<%= @response %>
+
+
+<%= @result["data"][0]["name"] %><br />
+<%= @result["data"][0]["description"] %>
