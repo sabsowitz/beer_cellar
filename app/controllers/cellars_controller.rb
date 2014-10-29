@@ -41,4 +41,14 @@ class CellarsController < ApplicationController
     @cellar.destroy
     redirect_to cellar_path
   end
+
+  private
+
+    def folio_params
+      params.require(:cellar).permit(:title)
+    end
+
+    def signed_in_user
+      redirect_to signin_path, notice: "Please sign in." unless signed_in?
+    end
 end

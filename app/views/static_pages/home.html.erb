@@ -1,8 +1,14 @@
 
 <% provide(:title, 'Home') %>
-<div class="background">
-    <div class="body">
-        <h2> This is the homepage for the BeerCellar application.</h2><br />
-        <%= link_to "Sign up for BeerCellar now!", signup_path, class: "btn btn-large btn-primary" %>
+<div class="home_container">
+  <div class="back">
+    <div class="jumbotron">
+      <div class="welcome_container">
+        <h1>BeerCellar</h1>
+        <h2>Great People Drink Great Beer!</h2>
+        <%= link_to "Sign up for BeerCellar now!", signup_path, class: "btn btn-large btn-default" %>
+        <%= link_to "Sign In!", signin_path, class: "btn btn-large btn-default" %>
+      </div>
     </div>
+  </div>
 </div>
