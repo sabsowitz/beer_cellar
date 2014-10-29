@@ -9,18 +9,24 @@
 
 <div class="results">
 <% if @result != nil %>
-  <% @result["data"].each do | beer | %>
-    <p> 
-                            <h1><%= name(beer) %></h1>
-      Style:                    <%= style(beer) %><br />
-      ABV%:                     <%= abv(beer) %><br />
-      IBUs:                     <%= ibu(beer) %><br />
-      Description:              <%= description(beer) %><br />
-      AVAILABILITY:             <%= when_available(beer) %><br />
-      SERVE IN:                 <%= glass_type(beer) %><br />
-      Label:                    <%= label_form(beer) %><br />
-      <b>Style Description:</b> <%= style_description(beer) %>
-    </p>
+  <% if @result["data"].nil? %>
+    <h2>No results found</h2>
+  <% else %>
+    <% @result["data"].each do | beer | %>
+      <p> 
+                              <h1><%= name(beer) %></h1>
+        Style:                    <%= style(beer) %><br />
+        ABV%:                     <%= abv(beer) %><br />
+        IBUs:                     <%= ibu(beer) %><br />
+        Description:              <%= description(beer) %><br />
+        AVAILABILITY:             <%= when_available(beer) %><br />
+        SERVE IN:                 <%= glass_type(beer) %><br />
+        
+        <b>Label:</b>             <%= label_for(beer) %><br />
+        <b>Style Description:</b> <%= style_description(beer) %>
+      </p>
+      <hr>
+    <% end %>
   <% end %>
 <% end %>
 </div>
