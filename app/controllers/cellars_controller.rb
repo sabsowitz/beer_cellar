@@ -10,16 +10,16 @@ class CellarsController < ApplicationController
   end
 
   def create
-    @cellar = current_user.tasks.build(task_params)
+    @cellar = current_user.cellars.build(cellar_params)
     if @cellar.save
-      redirect_to task_path(@cellar.id), notice: "You have created a new task"
+      redirect_to task_path(@cellar.id), notice: "You have created a new Cellar"
     else
       render 'new'
     end
   end
 
   def index
-    # @cellars = Task.all
+    # @cellars = Cellar.all
     @cellars = current_user.cellars
   end
 
@@ -30,7 +30,7 @@ class CellarsController < ApplicationController
   def update
     @cellar = Cellar.find(params[:id])
     if @cellar.update_attributes(cellar_params)
-      redirect_to task_path(@cellar.id)
+      redirect_to cellar_path(@cellar.id)
     else
       render 'edit'
     end
@@ -41,3 +41,4 @@ class CellarsController < ApplicationController
     @cellar.destroy
     redirect_to cellar_path
   end
+end
