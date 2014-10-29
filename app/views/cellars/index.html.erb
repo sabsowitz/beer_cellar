@@ -1,0 +1,9 @@
+<% provide(:title, "My Cellars") %>
+
+<h1>All Tasks</h1>
+
+<ul>
+  <% @cellars.each do | cellar | %>
+    <li><%= cellar.title %>, <%= link_to "delete", cellar, method: :delete, data: { confirm: "Are you sure?" } %></li>
+  <% end %>
+</ul>
