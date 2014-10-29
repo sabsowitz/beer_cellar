@@ -23,7 +23,7 @@ module BeersHelper
     beer["glass"] ? beer["glass"]["name"] : "N/A"
   end
 
-  def label(beer)
+  def label_for(beer)
     beer["labels"] ? (image_tag beer["labels"]["medium"]) : " "
   end
 
