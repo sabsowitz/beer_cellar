@@ -1,17 +1,29 @@
 <% provide(:title, "Search") %>
+<center>
 <h1>Search for Beer!</h1>
 
 <%= form_tag beers_path, :method => 'get' do %>
-  <%= text_field_tag :beer_name, params[:search] %>
+  <%= text_field_tag :search %>
   <%= submit_tag "Search", :name => nil %>
 <% end %><br />
+</center>
+
+
+<% @brewery %>
+    <h1><center><%= @brewery["name"] %></center></h1>
+      <center>  <%= (image_tag @brewery["images"]["large"]) %></center>
+        <%= @brewery["description"] %>
+             <b><%= link_to "Website", @brewery["website"] %></b>
+        <hr>
+        
+
 
 <div class="results">
-  <% if @result != nil %>
-    <% if @result["data"].nil? %>
-      <h2>No results found</h2>
+  <% if @result_by_beer != nil %>
+    <% if @result_by_beer["data"].nil? %>
+      <h2>This is not the beer you are looking for!</h2>
     <% else %>
-      <% @result["data"].each do | beer | %>
+      <% @result_by_beer["data"].each do | beer | %>
         <p> 
                                 <h1><%= name(beer) %></h1>
           Style:                    <%= style(beer) %><br />
@@ -21,7 +33,7 @@
           AVAILABILITY:             <%= when_available(beer) %><br />
           SERVE IN:                 <%= glass_type(beer) %><br />
           
-          <b>Label:</b>             <%= label_for(beer) %><br />
+          <center><b>Label:</b>     <%= label_for(beer) %></center><br />
           <b>Style Description:</b> <%= style_description(beer) %>
         </p>
         <%= form_for(:beer, url: beers_path) do |f| %>

@@ -2,11 +2,10 @@ class BeersController < ApplicationController
   def index
     @cellars = current_user.cellars
     if params[:search]
-      # @result = Beer.party(params[:beer_search])
-      @result_by_beer = 
-      @result_by_brewery = 
+      @result_by_beer = Beer.search_by_beer(params[:search])
+      @brewery = Beer.search_by_brewery(params[:search])["data"].first
     else
-      @result = nil
+      @result_by_beer = nil
     end
   end
 
