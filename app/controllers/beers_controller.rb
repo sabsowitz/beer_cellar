@@ -23,6 +23,12 @@ class BeersController < ApplicationController
     end
   end
 
+  def destroy
+    @beer = Beer.find(params[:id])
+    @beer.destroy
+    redirect_to cellars_path, notice: "You successfully deleted a beer from your Cellar!"
+  end
+
   private
 
     def beer_params

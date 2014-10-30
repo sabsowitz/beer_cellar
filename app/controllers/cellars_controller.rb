@@ -1,5 +1,5 @@
 class CellarsController < ApplicationController
-  # before_action :signed_in_user
+  before_action :signed_in_user
 
   def show
     @cellar = Cellar.find(params[:id])
