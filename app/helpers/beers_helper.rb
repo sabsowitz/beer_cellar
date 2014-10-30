@@ -24,7 +24,7 @@ module BeersHelper
   end
 
   def label_for(beer)
-    beer["labels"] ? (image_tag beer["labels"]["medium"]) : " "
+    beer["labels"] ? (image_tag beer["labels"]["medium"]) : "N/A"
   end
 
   def style(beer)

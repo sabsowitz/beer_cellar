@@ -1,5 +1,5 @@
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Pacifico|Didact+Gothic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 .btn {
   border-radius: 100px;
@@ -29,9 +29,29 @@
 }
 
 .welcome_container {
-  font-family: 'Pacifico';
+  font-family: 'Open Sans';
   font-weight: 400;
   color: white;
   text-align: center;
 
+}
+
+.navbar {
+  font-family: 'Open Sans';
+}
+
+.results {
+  font-family: 'Open Sans';
+}
+
+h1 {
+  font-family: 'Open Sans';
+}
+
+p {
+  font-family: 'Open Sans';
+}
+
+th {
+  font-family: 'Open Sans';
 }
