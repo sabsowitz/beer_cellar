@@ -3,6 +3,7 @@ class CellarsController < ApplicationController
 
   def show
     @cellar = Cellar.find(params[:id])
+    @beers = @cellar.beers
   end
 
   def new
@@ -12,7 +13,7 @@ class CellarsController < ApplicationController
   def create
     @cellar = current_user.cellars.build(cellar_params)
     if @cellar.save
-      redirect_to task_path(@cellar.id), notice: "You have created a new Cellar"
+      redirect_to cellar_path(@cellar.id), notice: "You have created a new Cellar"
     else
       render 'new'
     end
@@ -39,12 +40,12 @@ class CellarsController < ApplicationController
   def destroy
     @cellar = Cellar.find(params[:id])
     @cellar.destroy
-    redirect_to cellar_path
+    redirect_to cellars_path
   end
 
   private
 
-    def folio_params
+    def cellar_params
       params.require(:cellar).permit(:title)
     end
 

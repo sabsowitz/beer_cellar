@@ -1,12 +1,15 @@
 
 <% provide(:title, 'Home') %>
+
+<img src="/assets/founders.jpg" id="home_background">
+
 <div class="home_container">
   <div class="back">
     <div class="jumbotron">
       <div class="welcome_container">
         <h1>BeerCellar</h1>
         <h2>Great People Drink Great Beer!</h2>
-        <%= link_to "Sign up for BeerCellar now!", signup_path, class: "btn btn-large btn-default" %>
+        <%= link_to "Sign up!", signup_path, class: "btn btn-large btn-default" %>
         <%= link_to "Sign In!", signin_path, class: "btn btn-large btn-default" %>
       </div>
     </div>

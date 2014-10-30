@@ -1,14 +1,16 @@
 <% provide(:title, "My Cellar") %>
 
-<div class="cellar">
-  <center>
-    <h1>My Cellar</h1>
-
-    <ul>
-      <% @cellars.each do | cellar | %>
-        <li><%= cellar.title %>, <%= link_to "delete", cellar, method: :delete, data: { confirm: "Are you sure?" } %></li>
-      <% end %>
-    </ul>
-    
-  <center>
+<table class="table table-bordered">
+  <tr>
+    <th>Cellar Name</th>
+    <th colspan="2" th class="text-center">Actions</th>
+  </tr>
+  <% @cellars.each do | cellar | %>
+  <tr>
+    <td><%= cellar.title %> </td>
+    <td class="button-cell text-center"><%= link_to 'Show',cellar_path(cellar) %></td>
+    <td class="button-cell text-center"><%= link_to "delete", cellar, method: :delete, data: { confirm: "Are you sure?" } %>
+    </td>
+  </tr>
+  <% end %>
 </div>

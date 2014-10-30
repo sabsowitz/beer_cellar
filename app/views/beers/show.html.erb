@@ -1,4 +1,17 @@
-<h1>Beers#show</h1>
-<p>Find me in app/views/beers/show.html.erb</p>
+<% provide(:title, "Show Beers") %>
 
-<%= @response %>
+<h1 class="text-center"><%= @beer.beer_name %></h1>
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Style</th>
+    <th>ABV%</th>
+    <th>Glassware</th>
+  </tr>
+  <tr>
+    <td><%= @beer.beer_name %></td>
+    <td><%= @beer.style %></td>
+    <td><%= @beer.abv %></td>
+    <td><%= @beer.glassware %></td>
+  </tr>
+</table>
