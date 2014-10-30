@@ -3,7 +3,7 @@ class BeersController < ApplicationController
     @cellars = current_user.cellars
     if params[:search]
       @result_by_beer = Beer.search_by_beer(params[:search])
-      @brewery = Beer.search_by_brewery(params[:search])["data"].first
+      @brewery = Beer.search_by_brewery(params[:search])["data"][0]
     else
       @result_by_beer = nil
     end

@@ -1,6 +1,6 @@
 <% provide(:title, "Search") %>
 <center>
-<h1>Search BeerCellar!</h1>
+<h1>Search BeerCellar!</h1><br />
 
 <%= form_tag beers_path, :method => 'get' do %>
   <%= text_field_tag :search %>
@@ -8,14 +8,15 @@
 <% end %><br />
 </center>
 
-
-<% @brewery %>
-    <h1><center><%= @brewery["name"] %></center></h1>
-      <center>  <%= (image_tag @brewery["images"]["large"]) %></center>
-        <%= @brewery["description"] %><br />
-             <b><%= link_to "Website", @brewery["website"] %></b><hr>
-        
-
+    <% if @brewery != nil %>
+      <% if @brewery["data"].nil? %>
+            <h1><center><%= @brewery["name"] %></center></h1>
+              <center>  <%= (image_tag @brewery["images"]["large"]) %></center>
+                <%= @brewery["description"] %><br />
+             <center><b><%= link_to "Website", @brewery["website"] %></b></center><hr>
+      <% end %>
+    <% end %>
+            
 
 <div class="results">
   <% if @result_by_beer != nil %>
