@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
 gem 'httparty'
-# gem 'brewery_db'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-sass'
 gem 'sass-rails', '~> 4.0.3'
