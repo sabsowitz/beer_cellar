@@ -1,9 +1,11 @@
 class BeersController < ApplicationController
+before_action :signed_in_user
+
   def index
     @cellars = current_user.cellars
     if params[:search]
-      @result_by_beer = Beer.search_by_beer(params[:search])
       @brewery = Beer.search_by_brewery(params[:search])["data"][0]
+      @result_by_beer = Beer.search_by_beer(params[:search])
     else
       @result_by_beer = nil
     end
@@ -34,5 +36,9 @@ class BeersController < ApplicationController
 
     def beer_params
       params.require(:beer).permit(:beer_name, :style, :abv, :glassware, :cellar_id)
+    end
+
+    def signed_in_user
+      redirect_to signin_path, notice: "Please sign in." unless signed_in?
     end
 end

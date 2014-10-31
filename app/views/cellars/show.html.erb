@@ -1,4 +1,4 @@
-<% provide(:title, "Cellar") %>
+<% provide(:title, "My Cellar") %>
 
 <h1 class="text-center"><%= @cellar.title %></h1>
 <table class="table table-bordered">
@@ -19,3 +19,7 @@
     </tr>
   <% end %>
 </table>
+<center>
+  <%= link_to "Go To Cellars", cellars_path, class: "btn btn-large btn-default" %><br />
+  <%= link_to "Search for Beers", beers_path, class: "btn btn-large btn-default" %><br />
+</center>

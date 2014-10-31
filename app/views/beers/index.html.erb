@@ -6,6 +6,7 @@
   <%= text_field_tag :search %>
   <%= submit_tag "Search", :name => nil %>
 <% end %><br />
+<%= link_to "Go To My Cellar", cellars_path, class: "btn btn-large btn-default" %><br />
 </center>
 
     <% if @brewery != nil %>

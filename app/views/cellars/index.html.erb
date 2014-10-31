@@ -1,11 +1,10 @@
-<% provide(:title, "My Cellar") %>
+<% provide(:title, "Cellars") %>
 
 <table class="table table-bordered">
   <tr>
     <th>Cellar Name</th>
     <th colspan="2" th class="text-center">Actions</th>
-  </tr>
-  <% @cellars.each do | cellar | %>
+    <% @cellars.each do | cellar | %>
   <tr>
     <td><%= cellar.title %> </td>
     <td class="button-cell text-center"><%= link_to 'Show',cellar_path(cellar) %></td>
@@ -13,4 +12,8 @@
     </td>
   </tr>
   <% end %>
+</table>
 </div>
+<br />
+<center><%= link_to "Search for Beers", beers_path, class: "btn btn-large btn-default" %></center><br />
+
