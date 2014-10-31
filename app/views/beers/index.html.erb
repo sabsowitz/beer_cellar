@@ -9,13 +9,11 @@
 <%= link_to "Go To My Cellar", cellars_path, class: "btn btn-large btn-default" %><br />
 </center>
 
-    <% if @brewery != nil %>
-      <% if @brewery["data"].nil? %>
+     <% if @brewery != nil %>
             <h1><center><%= @brewery["name"] %></center></h1>
               <center>  <%= (image_tag @brewery["images"]["large"]) %></center>
                 <%= @brewery["description"] %><br />
              <center><b><%= link_to "Website", @brewery["website"] %></b></center><hr>
-      <% end %>
     <% end %>
             
 

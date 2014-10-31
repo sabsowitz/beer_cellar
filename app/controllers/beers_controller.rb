@@ -4,7 +4,8 @@ before_action :signed_in_user
   def index
     @cellars = current_user.cellars
     if params[:search]
-      @brewery = Beer.search_by_brewery(params[:search])["data"][0]
+      brewery_data = Beer.search_by_brewery(params[:search])["data"]
+      @brewery = brewery_data ? brewery_data[0] : nil
       @result_by_beer = Beer.search_by_beer(params[:search])
     else
       @result_by_beer = nil
