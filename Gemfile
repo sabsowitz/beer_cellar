@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'angularjs-rails'
 gem 'rails_12factor', group: :production
 gem 'httparty'
 gem 'twitter-bootstrap-rails'

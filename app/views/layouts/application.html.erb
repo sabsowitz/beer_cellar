@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="beer_app">
   <head>
     <title>Beer Cellar | <%= yield(:title) %></title>
     <%= stylesheet_link_tag    'application' %>
-    <%= javascript_include_tag 'application' %>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
     <%= csrf_meta_tags %>
   </head>
   <body>
-
-    <%= render 'layouts/navigation' %>
-    <%= flash[:notice] %>
-    <%= yield %>
+    <div ng-view>
+      <%= render 'layouts/navigation' %>
+      <%= flash[:notice] %>
+      <%= yield %>
+    </div>
   </body>
 </html>
