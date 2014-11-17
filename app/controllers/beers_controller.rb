@@ -12,6 +12,9 @@ before_action :signed_in_user
     end
   end
 
+  def new
+  end
+  
   def show
     @beer = Beer.find(params[:id])
   end

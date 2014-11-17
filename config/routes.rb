@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :cellars
-  resources :beers
+  resources :beers, only: [:new, :create, :destroy, :show]
   
   get '/beers' => 'beers#index'
 
