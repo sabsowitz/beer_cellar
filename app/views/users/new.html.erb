@@ -1,9 +1,11 @@
 <% provide(:title, 'Sign up') %>
-<center><h1>Sign up</h1></center>
+<img src="/assets/orpheus.jpg" id="home_background">
 
-<center>
-<div class="row">
+<div class="jumbotron_signup">
   <div class="span6 offset3">
+    <h1>Sign up</h1>
+    <br />
+
     <%= form_for(@user) do |f| %>
 
       <%= f.label :name %>
@@ -18,8 +20,8 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %><br />
       <br />
-      <%= f.submit "Create My Account", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Create My Account", class: "btn btn-large btn-default" %>
     <% end %>
+    <br />
   </div>
 </div>
-</center>
