@@ -16,6 +16,7 @@
    <% if @brewery != nil %>
     <h1><center><%= @brewery["name"] %></center></h1>
     <center><%= (image_tag @brewery["images"]["large"]) %></center>
+    <br />
     <%= @brewery["description"] %><br />
     <center><b><%= link_to "Website", @brewery["website"] %></b></center><hr>
   <% end %>

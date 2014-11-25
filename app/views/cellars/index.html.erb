@@ -1,20 +1,21 @@
 <% provide(:title, "Cellars") %>
 <img src="/assets/orpheus.jpg" id="home_background">
 
-  <div class="jumbotron">
-    <table class="table table-bordered">
-        <tr>
-          <th>Cellar Name</th>
-          <th colspan="2" th class="text-center">Actions</th>
-          <% @cellars.each do | cellar | %>
+<div class="jumbotron">
+  <table class="table table-bordered">
+    <tr>
+      <th>Cellar Name</th>
+      <th colspan="2" th class="text-center">Actions</th>
+      <% @cellars.each do |cellar| %>
         <tr>
           <td><%= cellar.title %> </td>
           <td class="button-cell text-center"><%= link_to 'Show',cellar_path(cellar) %></td>
-          <td class="button-cell text-center"><%= link_to "Delete", cellar, method: :delete, data: { confirm: "Are you sure?" } %>
+          <td class="button-cell text-center">
+            <%= link_to "Delete", cellar, method: :delete, data: { confirm: "Are you sure?" } %>
           </td>
         </tr>
-        <% end %>
-      </table>
+      <% end %>
+    </table>
     <br />
 
     <center><%= link_to "Create a Cellar", new_cellar_path, class: "btn btn-large btn-default" %></center><br />

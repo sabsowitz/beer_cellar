@@ -6,11 +6,12 @@
 }
 
 #home_background {
-background: no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+  position: no-repeat center center fixed; 
+  top: 0;    
+  left: 0;   
+  min-width: 100%;  
+  min-height: 100%;    
+  z-index: -1;
 }
 
 .home_container {
@@ -63,7 +64,6 @@ background-size: cover;
   margin-top: auto;
   border-radius: 50px;
   font-family: 'Open Sans';
-  color: white;
   text-align: center;
 }
 
