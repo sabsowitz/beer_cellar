@@ -1,9 +1,13 @@
 <% provide(:title, @user.name) %>
-<center>
-<h1>
-  <%= @user.name %>
-</h1>
-<br />
-<%= link_to "Go To Cellars", cellars_path, class: "btn btn-large btn-default" %><br />
-<%= link_to "Search for Beers", beers_path, class: "btn btn-large btn-default" %><br />
-</center>
+<img src="/assets/orpheus.jpg" id="home_background">
+
+<div class="jumbotron">
+    <h1><%= @user.name %></h1>
+    <br />
+    <h2>Profile</h2>
+    <br />
+  <center>
+    <%= link_to "Go To Cellars", cellars_path, class: "btn btn-large btn-default" %><br />
+    <%= link_to "Search for Beers", beers_path, class: "btn btn-large btn-default" %><br />
+  </center>
+</div>
