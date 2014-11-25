@@ -1,13 +1,14 @@
 <%= form_for(@cellar) do |f| %>
 
-  <div>
-    <%= f.label :title %>:
-    <%= f.text_field :title %>
-  </div>
-  <br />
-  
-  <div>
-    <%= f.submit 'Save' %>
-  </div>
-
-<% end %>
+<br />
+<center>
+    <div>
+      <p>Title:</p><%= f.text_field :title %>
+    </div>
+    <br />
+    
+    <div>
+      <%= f.submit 'Save' %>
+    </div>
+  <% end %>
+</center>
