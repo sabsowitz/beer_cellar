@@ -1,50 +1,55 @@
 <% provide(:title, "Search") %>
-<center>
-<h1>Search BeerCellar!</h1><br />
+<img src="/assets/orpheus.jpg" id="home_background"> 
 
-<%= form_tag beers_path, :method => 'get' do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %><br />
-<%= link_to "Go To My Cellar", cellars_path, class: "btn btn-large btn-default" %><br />
-</center>
+<div class="jumbotron_search"><br />
+  <center>
+  <h1>Search BeerCellar!</h1><br />
 
- <% if @brewery != nil %>
-  <h1><center><%= @brewery["name"] %></center></h1>
-  <center><%= (image_tag @brewery["images"]["large"]) %></center>
-  <%= @brewery["description"] %><br />
-  <center><b><%= link_to "Website", @brewery["website"] %></b></center><hr>
-<% end %>
-            
+  <%= form_tag beers_path, :method => 'get' do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %><br />
+  <%= link_to "Go To My Cellar", cellars_path, class: "btn btn-large btn-default" %><br />
+  </center>
+  <br />
 
-<div class="results">
-  <% if @result_by_beer != nil %>
-    <% if @result_by_beer["data"].nil? %>
-      <h2>This is not the beer you are looking for!</h2>
-      <% else %>
-        <% @result_by_beer["data"].each do | beer | %>
-          <p> 
-                                  <h1><%= name(beer) %></h1>
-            Style:                    <%= style(beer) %><br />
-            ABV%:                     <%= abv(beer) %><br />
-            IBUs:                     <%= ibu(beer) %><br />
-            Description:              <%= description(beer) %><br />
-            AVAILABILITY:             <%= when_available(beer) %><br />
-            SERVE IN:                 <%= glass_type(beer) %><br />
-            
-            <center><b>Label:</b>     <%= label_for(beer) %></center><br />
-            <b>Style Description:</b> <%= style_description(beer) %>
-          </p>
-        <%= form_for(:beer, url: beers_path) do |f| %>
-          <%= f.select(:cellar_id, options_for_select(@cellars.map { |cellar| [cellar.title, cellar.id]})) %>
-          <%= f.hidden_field :beer_name, value: name(beer) %>
-          <%= f.hidden_field :style, value: style(beer) %>
-          <%= f.hidden_field :abv, value: abv(beer) %>
-          <%= f.hidden_field :glassware, value: glass_type(beer) %>
-          <%= f.submit "Add to Cellar" %>
+   <% if @brewery != nil %>
+    <h1><center><%= @brewery["name"] %></center></h1>
+    <center><%= (image_tag @brewery["images"]["large"]) %></center>
+    <%= @brewery["description"] %><br />
+    <center><b><%= link_to "Website", @brewery["website"] %></b></center><hr>
+  <% end %>
+              
+
+  <div class="results">
+    <% if @result_by_beer != nil %>
+      <% if @result_by_beer["data"].nil? %>
+        <h2>This is not the beer you are looking for!</h2>
+        <% else %>
+          <% @result_by_beer["data"].each do | beer | %>
+            <p> 
+                                    <h1><%= name(beer) %></h1>
+              Style:                    <%= style(beer) %><br />
+              ABV%:                     <%= abv(beer) %><br />
+              IBUs:                     <%= ibu(beer) %><br />
+              Description:              <%= description(beer) %><br />
+              AVAILABILITY:             <%= when_available(beer) %><br />
+              SERVE IN:                 <%= glass_type(beer) %><br />
+              
+              <center><b>Label:</b>     <%= label_for(beer) %></center><br />
+              <b>Style Description:</b> <%= style_description(beer) %>
+            </p>
+          <%= form_for(:beer, url: beers_path) do |f| %>
+            <%= f.select(:cellar_id, options_for_select(@cellars.map { |cellar| [cellar.title, cellar.id]})) %>
+            <%= f.hidden_field :beer_name, value: name(beer) %>
+            <%= f.hidden_field :style, value: style(beer) %>
+            <%= f.hidden_field :abv, value: abv(beer) %>
+            <%= f.hidden_field :glassware, value: glass_type(beer) %>
+            <%= f.submit "Add to Cellar" %>
+          <% end %>
+          <hr>
         <% end %>
-        <hr>
       <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
