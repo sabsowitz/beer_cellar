@@ -1,17 +1,15 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-.btn {
-  border-radius: 100px;
+body {
+  background-image: url("/assets/orpheus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
-#home_background {
-  position: no-repeat center center fixed; 
-  top: 0;    
-  left: 0;   
-  min-width: 100%;  
-  min-height: 100%;    
-  z-index: -1;
+.btn {
+  border-radius: 100px;
 }
 
 .home_container {

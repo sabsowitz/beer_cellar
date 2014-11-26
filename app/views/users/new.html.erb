@@ -1,28 +1,29 @@
 <% provide(:title, 'Sign up') %>
-<img src="/assets/orpheus.jpg" id="home_background">
 
-<div class="jumbotron_signup">
-  <div class="span6 offset3">
-    <h1>Sign up</h1>
-    <br />
+<body>
+  <div class="jumbotron_signup">
+    <div class="span6 offset3">
+      <h1>Sign up</h1>
+      <br />
 
-      <%= form_for(@user) do |f| %>
+        <%= form_for(@user) do |f| %>
 
-        <%= f.label :name %>
-        <%= f.text_field :name %><br />
+          <%= f.label :name %>
+          <%= f.text_field :name %><br />
 
-        <%= f.label :email %>
-        <%= f.text_field :email %><br />
+          <%= f.label :email %>
+          <%= f.text_field :email %><br />
 
-        <%= f.label :password %>
-        <%= f.password_field :password %><br />
+          <%= f.label :password %>
+          <%= f.password_field :password %><br />
 
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation %><br />
-        <br />
-        <%= f.submit "Create My Account", class: "btn btn-large btn-default" %>
-      <% end %>
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation %><br />
+          <br />
+          <%= f.submit "Create My Account", class: "btn btn-large btn-default" %>
+        <% end %>
 
-    <br />
+      <br />
+    </div>
   </div>
-</div>
+</body>
