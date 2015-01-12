@@ -2,17 +2,17 @@
 
 development:
   adapter: postgresql
-  database: todo_development
+  database: beer_cellar_development
   host: localhost
 
 test:
   adapter: postgresql
-  database: todo_test
+  database: beer_cellar_test
   host: localhost
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: todo_production
+  database: beer_cellar_production
   pool: 5
 
