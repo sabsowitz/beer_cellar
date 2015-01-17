@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'brewery_db'
 gem 'rails_12factor', group: :production
-gem 'newrelic_rpm'
 gem 'unicorn'
 gem 'httparty'
 gem 'twitter-bootstrap-rails'
