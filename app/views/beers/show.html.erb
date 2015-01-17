@@ -1,26 +1,24 @@
 <% provide(:title, "Show Beers") %>
 
-<body>
-  <div class="jumbotron">
-    <h1 class="text-center"><%= @beer.beer_name %></h1>
-    <table class="table table-bordered">
-      <tr>
-        <th>Name</th>
-        <th>Style</th>
-        <th>ABV%</th>
-        <th>Glassware</th>
-      </tr>
-      <tr>
-        <td><%= @beer.beer_name %></td>
-        <td><%= @beer.style %></td>
-        <td><%= @beer.abv %></td>
-        <td><%= @beer.glassware %></td>
-      </tr>
-    </table>
-    <br />
-    <center>
-      <%= link_to "Go To Cellars", cellars_path, class: "btn btn-large btn-default" %><br />
-      <%= link_to "Search for Beers", beers_path, class: "btn btn-large btn-default" %><br />
-    </center>
-  </div>
-</body>
+<div class="jumbotron">
+  <h1 class="text-center"><%= @beer.beer_name %></h1>
+  <table class="table table-bordered">
+    <tr>
+      <th>Name</th>
+      <th>Style</th>
+      <th>ABV%</th>
+      <th>Glassware</th>
+    </tr>
+    <tr>
+      <td><%= @beer.beer_name %></td>
+      <td><%= @beer.style %></td>
+      <td><%= @beer.abv %></td>
+      <td><%= @beer.glassware %></td>
+    </tr>
+  </table>
+  <br />
+  <center>
+    <%= link_to "Go To Cellars", cellars_path, class: "btn btn-large btn-default" %><br />
+    <%= link_to "Search for Beers", beers_path, class: "btn btn-large btn-default" %><br />
+  </center>
+</div>

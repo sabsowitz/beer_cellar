@@ -1,31 +1,29 @@
 <% provide(:title, "My Cellar") %>
 
-<body>
-  <div class="jumbotron">
-    <h1 class="text-center"><%= @cellar.title %></h1>
-    <h2>My Cellar</h2>
-    <br />
-    <table class="table table-bordered">
+<div class="jumbotron">
+  <h1 class="text-center"><%= @cellar.title %></h1>
+  <h2>My Cellar</h2>
+  <br />
+  <table class="table table-bordered">
+    <tr>
+      <th>Beer Name</th>
+      <th class="text-center">Style</th>
+      <th colspan="2" class="text-center">Actions</th>
+    </tr>
+    <% @beers.each do |beer| %>
       <tr>
-        <th>Beer Name</th>
-        <th class="text-center">Style</th>
-        <th colspan="2" class="text-center">Actions</th>
+        <td><%= beer.beer_name %></td>
+        <td class="text-center"><%= beer.style %></td>
+        <td class="button-cell text-center">
+          <%= link_to 'Show', beer_path(beer), class: "" %></td>
+        <td class="button-cell text-center">
+          <%= link_to 'Delete', beer_path(beer), method: :delete, data: { confirm: 'Are you sure?' }, class: "" %>
+        </td>
       </tr>
-      <% @beers.each do |beer| %>
-        <tr>
-          <td><%= beer.beer_name %></td>
-          <td class="text-center"><%= beer.style %></td>
-          <td class="button-cell text-center">
-            <%= link_to 'Show', beer_path(beer), class: "" %></td>
-          <td class="button-cell text-center">
-            <%= link_to 'Delete', beer_path(beer), method: :delete, data: { confirm: 'Are you sure?' }, class: "" %>
-          </td>
-        </tr>
-      <% end %>
-    </table>
-    <center>
-      <%= link_to "Go To Cellars", cellars_path, class: "btn btn-large btn-default" %><br />
-      <%= link_to "Search for Beers", beers_path, class: "btn btn-large btn-default" %><br />
-    </center>
-  </div>
-</body>
+    <% end %>
+  </table>
+  <center>
+    <%= link_to "Go To Cellars", cellars_path, class: "btn btn-large btn-default" %><br />
+    <%= link_to "Search for Beers", beers_path, class: "btn btn-large btn-default" %><br />
+  </center>
+</div>

@@ -1,134 +1,14 @@
-@import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+
 
 
 body {
-  background-image: url("/assets/black_note.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+    background-image: url("/assets/black_note.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Lora', serif;
 }
 
 
-.btn {
-  border-radius: 100px;
-}
 
-.home_container {
-  min-width: 100%;
-  min-height: 100%;
-
-}
-
-.jumbotron {
-  background-color: #3A5493 !important;
-  width: 50%;
-  opacity: 0.7;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50px;
-  box-shadow: 20px 20px 20px;
-}
-
-.jumbotron_signin {
-  background-color: #3A5493;
-  width: 60%;
-  opacity: 0.9;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  border-radius: 50px;
-  font-family: 'Open Sans';
-  text-align: center;
-  box-shadow: 20px 20px 20px;
-}
-
-.jumbotron_signup {
-  background-color: #3A5493;
-  width: 60%;
-  text-align: center;
-  font-family: 'Open Sans';
-  margin-right: auto;
-  margin-left: auto;
-  opacity: 0.9; 
-  border-radius: 50px;
-  box-shadow: 20px 20px 20px;
-}
-
-.jumbotron_search {
-  background-color: #3A5493;
-  width: 60%;
-  opacity: 0.9;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  border-radius: 50px;
-  font-family: 'Open Sans';
-  text-align: center;
-}
-
-.welcome_container {
-  font-family: 'Open Sans';
-  font-weight: 400;
-  color: white;
-  text-align: center;
-
-}
-
-.footer {
-    text-align: center;
-    color: white;
-    opacity: 0.6;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    background-color: black;
-}
-
-.navbar {
-  font-family: 'Open Sans';
-}
-
-.results {
-  font-family: 'Open Sans';
-}
-
-h1 {
-  font-family: 'Open Sans';
-  color: white !important;
-  text-align: center;
-}
-
-h2 {
-  font-family: 'Open Sans' !important;
-  color: white !important;
-  text-align: center;
-}
-
-h3 {
-  font-family: 'Open Sans';
-  color: white;
-  text-align: center;
-}
-
-h4 {
-  font-family: 'Open Sans';
-  color: white;
-  text-align: center;
-}
-
-p {
-  font-family: 'Open Sans';
-  color: white;
-}
-
-th {
-  font-family: 'Open Sans';
-  color: white;
-}
-
-td {
-  font-family: 'Open Sans';
-  color: white;
-}
