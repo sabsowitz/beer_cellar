@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
 @import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Lora&effect=3d|3d-float);
 
 body {
     background-image: url("/assets/black_note.jpg");
@@ -8,5 +8,13 @@ body {
     background-size: 100% 100%;
 }
 
-
+.welcome h1 {
+  padding-top: 16%;
+  font-family: 'Lora', serif;
+  font-size: 60px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 4px 4px 4px black;
+}
 
