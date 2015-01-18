@@ -16,6 +16,7 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", home_path %></li>
         <li><%= link_to "Features", about_path %></li>
+        <li><%= link_to "Help", help_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if signed_in? %>
@@ -32,8 +33,7 @@
           <% else %>
             <li><%= link_to "Sign Up", signup_path %></li>
             <li><%= link_to "Sign in", signin_path %></li>
-            <li><%= link_to "Help", help_path %></li>
-        <% end %>
+          <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
