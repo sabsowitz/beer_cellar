@@ -18,3 +18,15 @@ body {
   text-shadow: 4px 4px 4px black;
 }
 
+// Navbar
+.navbar-inverse {
+  background-color: black;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+// Title
+.navbar-inverse .navbar-brand {
+    color: #3A5493;
+}
