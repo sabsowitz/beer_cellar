@@ -43,6 +43,24 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="Rakefile" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="beer_cellar" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/Rakefile" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
@@ -57,8 +75,8 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.1.4, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.1.4, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v5.0.1.20140414130214, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v4.0.1.1, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.9, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v5.1.7.1, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.10, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.2.0.2, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="brewery_db (v0.2.4, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, ruby-2.2.1-p85) [gem]" level="application" />
@@ -67,37 +85,37 @@
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.2.2, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.4.0, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.2.0, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.2.0, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday (v0.8.9, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday_middleware (v0.9.1, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.6, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="font-awesome-sass (v4.2.2, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.8, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="font-awesome-sass (v4.3.2.1, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v2.1.2, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httparty (v0.13.3, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.11, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.2.5, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.2.12, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.1.2, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.2, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.6.1, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.4.3, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.10.1, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.6.2, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.5.1, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.11.0, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.5.5, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v1.2.0, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.5, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="pg (v0.17.1, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.6.2, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.1, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.5, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.10.1, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v4.1.4, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_12factor (v0.0.3, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails_serve_static_assets (v0.0.2, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_serve_static_assets (v0.0.4, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_stdout_logging (v0.0.3, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.1.4, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.4.2, ruby-2.2.1-p85) [gem]" level="application" />
@@ -112,14 +130,14 @@
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v2.35.1, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.6.0, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.12.3, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.2.2, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.2.4, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.4, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="twitter-bootstrap-rails (v3.2.0, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, ruby-2.2.1-p85) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.5.3, ruby-2.2.1-p85) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.7.1, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket (v1.0.7, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="win32console (v1.3.2, ruby-2.2.1-p85) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, ruby-2.2.1-p85) [gem]" level="application" />

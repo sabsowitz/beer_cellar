@@ -13,7 +13,7 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt-ruby', '~> 3.1.8'
 
 group :development, :test do
   gem 'rspec-rails', '3.1.0'
