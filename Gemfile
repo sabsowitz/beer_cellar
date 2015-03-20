@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'brewery_db'
 gem 'rails_12factor', group: :production
-gem 'newrelic_rpm'
-gem 'unicorn'
 gem 'httparty'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-sass'
@@ -16,8 +14,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
-gem 'bower-rails'
-gem 'angular-rails-templates'
 
 group :development, :test do
   gem 'rspec-rails', '3.1.0'
